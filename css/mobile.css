@@ -97,7 +97,7 @@ img, svg {
     }
     body, html {
     width : 100%;
-    overflow-x : hidden;
+    overflow-x : scroll;
     }
     .btn-main {
     border-radius : 40px;
@@ -142,7 +142,7 @@ img, svg {
     .site-header .cart {
     position : absolute;
     top : 12px;
-    right : 70px;
+    right : 30px;
     }
     .search {
     float : right;
@@ -190,7 +190,7 @@ img, svg {
     }
     main {
     position : relative;
-    margin-top : 220px;
+    margin-top : 250px;
     display : block;
     }
     main aside {
@@ -218,10 +218,10 @@ img, svg {
     padding : 20px 0;
     }
     .product-items button[type="submit"] {
-    width : 36px;
-    height : 36px;
     border-radius : 50%;
     border-style : dashed;
+    width: 36px;
+    height: 36px;
     }
     .product-items button[type="submit"]:hover {
     background-color : #cccccc;
@@ -326,7 +326,7 @@ img, svg {
     background : linear-gradient(145deg, #239c7c 0, #18775d 100%);
     border : none;
     box-sizing : border-box;
-    width : 142px;
+    min-width : 100px;
     height : 38px;
     }
     .droit button[type="submit"]:hover, .panier .gauche button:hover {
@@ -406,7 +406,7 @@ img, svg {
     color : #fff;
     border : none;
     box-sizing : border-box;
-    width : 142px;
+    min-width : 100px;
     height : 38px;
     }
     .panier .gauche button[name="supprimer"] {
@@ -417,7 +417,7 @@ img, svg {
     color : #fff;
     border : none;
     box-sizing : border-box;
-    width : 142px;
+    min-width : 100px;
     height : 38px;
     }
     .panier .gauche {
@@ -438,7 +438,7 @@ img, svg {
     }
     .droit h4:nth-of-type(2) {
     position : relative;
-    left : 13em;
+    left : 10em;
     }
     .panier .droit small {
     display : block;
@@ -448,7 +448,7 @@ img, svg {
     }
     .panier .droit button {
     position : relative;
-    left : 110px;
+    left : 100px;
     }
     .panier .droit {
     max-width : 400px;
