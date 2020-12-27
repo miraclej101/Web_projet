@@ -220,12 +220,11 @@ img, svg {
     .product-items button[type="submit"] {
     border-radius : 50%;
     border-style : dashed;
-    width: 36px;
-    height: 36px;
+    padding:6px 8px;
     }
     .product-item button >img{
-        min-width: 20px;
-        min-height: 20px;
+        width: 20px;
+        height: 20px;
     }
     .product-items button[type="submit"]:hover {
     background-color : #cccccc;
