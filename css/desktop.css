@@ -67,6 +67,7 @@ p {
     float : right;
     margin-right : 30px;
     display : block;
+    width: max-content;
     border-radius : 10px;
     box-shadow : 5px 5px 4px 4px grey;
     border : none;

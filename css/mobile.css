@@ -197,7 +197,7 @@ img, svg {
     color : orangered;
     border : grey dashed 2px;
     border-radius : 10px;
-    width : max-content;
+    width : 85%;
     padding : 10px;
     margin : 10px;
     }
@@ -466,4 +466,4 @@ img, svg {
     code{ 
         color: black;
         display:block}
-    
+    .logo img{max-height: 50px;}
