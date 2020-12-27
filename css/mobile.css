@@ -223,6 +223,10 @@ img, svg {
     width: 36px;
     height: 36px;
     }
+    .product-item button >img{
+        min-width: 20px;
+        min-height: 20px;
+    }
     .product-items button[type="submit"]:hover {
     background-color : #cccccc;
     }
