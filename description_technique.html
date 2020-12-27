@@ -69,19 +69,19 @@
                 <h4>Le header et le footer</h4>Ses affichages sont différents selon la taille de l’écran, détaillés comme suivant :
                 <h5>Header version mobile : </h5>
                 <p>
-                    D’abord, j’affecte le code<code>.site-header{position: absolute; width: 100%; margin: 0;}</code> au header pour le mettre dans sa position et sa largeur. De plus, le menu barre se met à gauche et 
-                   il n’autorise pas les éléments flottants à flotter sur son côté gauche <code>#logo-menu{clear: left ;}</code>. Il devrait aussi cacher la barre du navigateur (nav-barre) dans le 
+                    D’abord, j’affecte le code<code>.site-header {position: absolute; width: 100%; margin: 0;}</code> au header pour le mettre dans sa position et sa largeur. De plus, le menu barre se met à gauche et 
+                   il n’autorise pas les éléments flottants à flotter sur son côté gauche <code>#logo-menu{clear: left ;}</code> Il devrait aussi cacher la barre du navigateur (nav-barre) dans le 
                    menu car l’espace de l’écran ne sert pas bien l’affichage total de la nav-barre. Donc j’emploie <code>.nav-bar{display: none;}</code> pour cacher la nav-barre, ensuite je la fais 
-                   apparaître en survolant le menu et aussi la nav-barre qui reste sur sa position au survol : <code>#logo-menu:hover+ .nav-bar, .nav-bar:hover {display:block; background: #fff;}</code>.
-                   D’ailleurs, la nav-bar se présente en colonne <code>.nav-bar{flex-direction: column ;}</code>. Par ailleurs, le logo du restaurant et le titre de celui-ci sont alignés par 
-                   <code>.site-header .logo, .site-header .title{display: flex;}</code> En outre ,la barre de recherche (la search barre) et son bouton sont ajoutés en haut à droite de la page <code>.search{float: right;}</code>. 
+                   apparaître en survolant le menu et aussi la nav-barre qui reste sur sa position au survol : <code>#logo-menu:hover+ .nav-bar, .nav-bar:hover {display:block; background: #fff;}</code>
+                   D’ailleurs, la nav-bar se présente en colonne <code>.nav-bar{flex-direction: column ;}</code> Par ailleurs, le logo du restaurant et le titre de celui-ci sont alignés par flex 
+                   <code>.site-header .logo, .site-header .title{display: flex;}</code> En outre, la barre de recherche (la search barre) et son bouton sont ajoutés en haut à droite de la page <code>.search{float: right;}</code> 
                    Ensuite, le panier (.cart) est mis en haut à gauche de la page par la position absolute pour préciser sa position. Tous les liens de la page respective sont associés grâce à la balise &lt;a href&gt;. Je  
                    mets aussi des effets du changement de couleur quand on survole un lien ( :hover) et qu'on clique sur un lien ( :active).  
                 </p>
                 <h5>Header version desktop :</h5>
                 <p>
                     J’utilise « grid » pour aligner ses contenus en quatre colonnes aux proportions correspondants à la taille de contenu (en fr). De plus je limite la largeur maximum à 1450 px.
-                     Ensuite, je cache la menu barre en <code>.nav-bar{display : none ;}</code>. Il est important d’affecter le panier en <code>.site-header .cart {position: relative ; top :auto ; right :auto}</code> 
+                     Ensuite, je cache la menu barre en <code>.nav-bar{display : none ;}</code> Il est important d’affecter le panier en <code>.site-header .cart {position: relative ; top :auto ; right :auto}</code> 
                      car il est précédemment en position absolute dans la version mobile donc il n’est pas aligné avec les autres contenus malgré l’emploi du grid. En revanche, le logo du restaurant,
                       son titre, la nav barre et la recherche barre et son bouton sont placé bien dans le grid.
                 </p>
@@ -95,31 +95,31 @@
                 <p>
                     Ses contenus s’affichent en flex pour l’alignement. En conséquence le logo du restaurant se place à gauche, à côté d’un block du titre et du contact du restaurant. Malheureusement, 
                     le lien des références est mal placé à droite au centre du footer, donc je le mets en <code>.site-footer a small{position : absolute ; right:200px; bottom: 30px;}</code> afin de le placer en bas
-                     droite du footer.
+                     à droite du footer.
                 </p>
             </section>
             <section>
                 <h3>Page d’accueil (index.html)</h3>
                 <p>
-                    Cette page présente un message de promotion (ayant un lien à la page du résultat de recherche : 1 Acheté 1 Offert), certains plats avec leur image, leur nom, leur prix, un bouton panier
-                      pour ajouter un produit rapidement au panier, et un lien de détail du plat. La mise en place des version différentes comme suivante :
+                    Cette page présente un message de promotion (ayant un lien à la page du résultat de recherche : 1 Acheté 1 Offert), certains plats avec leur image, leur nom, leur prix, leur bouton panier
+                      pour ajouter un produit rapidement au panier, et leur lien de détail du plat. La mise en place des version différentes comme suivante :
                 </p>
                 <h5>Version mobile :</h5>
                 <p>
-                    Les contenus des plats sont mis dans deux colonnes du grid de la même taille <code>.product-items {grid-template-columns: 1fr 1fr;}</code>. J’affecte <code>.product-item img {width : 100 % ;}</code> à sa largeur 
+                    Les contenus des plats sont mis dans deux colonnes du grid de la même taille <code>.product-items {grid-template-columns: 1fr 1fr;}</code> J’affecte <code>.product-item img {width : 100 % ;}</code> à sa largeur 
                     et <code>img{ height: auto;}</code> à la hauteur à chaque image (l’ensemble des éléments img). Le message de la promotion s’affiche en block décoré en boîte : la larguer d’une bordure de 2px et 
-                    le style de la bordure en pontillés (dashed) et la couleur de la bordure en gris avec des coins  arrondies : <code>main aside {border: 2px dashed grey; border-radius: 10px;}</code>. La version mobile, 
+                    le style de la bordure en pontillés (dashed) et la couleur de la bordure en gris avec des coins  arrondis : <code>main aside {border: 2px dashed grey; border-radius: 10px;}</code> La version mobile, 
                     je voudrais afficher des items en 2D en raison de la limite de l’espace de l'écran d’un téléphone mobile.
                 </p>
                 <p>
                     En bas du main, j’ajoute un div class sec-contact qui contient le titre « Contactez-nous », le numéro de téléphone et l’adresse email accompagnés respectivement avec leur icône. Les items 
-                    dans cette partie sont affiché en flex en colonne : <code>.contact-items { display: flex ; flex-direction: column; justify-content: center;}</code>.
+                    dans cette partie sont affiché en flex en colonne : <code>.contact-items { display: flex ; flex-direction: column; justify-content: center;}</code>
                 </p>
                 <h5>Version desktop :</h5>
                 <p>
                     Les contenus des plats sont affichés aussi en grid mais répartis équitablement en quatre colonnes : <code>.product-items {grid-template-columns: repeat(4,1fr);}</code>. Non seulement, l’affichage du message 
                     de la promotion est inhérent au CSS mobile précédent mais en plus se place à droite  et est décoré en boîte avec des ombres: <code>main aside {float: right; display: block; border-radius: 10px ; box-shadow: 
-                    5px 5px 4px 4px grey; border: none;}</code>. Comme l’écran d’ordinateur est tellement plus grand que je peux afficher des items en 3D dans la version desktop. Le titre « Contactez-nous » reste au milieu 
+                    5px 5px 4px 4px grey; border: none;}</code>. Comme l’écran d’ordinateur est tellement grand que je peux afficher des items en 3D dans la version desktop. Le titre « Contactez-nous » reste au milieu 
                     de la fenêtre et en block. Néanmoins, les contact items s’affiche en flex en ligne: <code>.contact-items {flex-direction: row;}</code> en même temps, les textes, « Téléphone » et « Email » s’affichent en block:  
                     <code>p {display: block;}</code>
                 </p>
@@ -135,15 +135,15 @@
                     L’ensemble du main s’affiche en block, d’ailleurs il est repartie en deux : class « gauche » et class « droit». La class gauche présente l’image du produit avec la largeur 100%. En même temps, la class droit
                     montre le titre du produit, la description, le prix et la forme de commande. Tous sont affichés en block. Seulement, la forme s’affiche en boîte avec une bordure en
                     pointillé et des frontières arrondies. J’ajoute des effets du changement au bouton « ajouter au panier ». En le survolant, il bouge en haut :<br>
-                    <code>.droit button[type=submit]:hover {transform: translate (0,-3px)}</code><br>
-                    et en cliquant (active), il rétrécit en échelle 0.94 ; si l’échelle de 1.0, il ne transforme pas :<br>
-                    <code>.droit button[type=submit]:hover{transform:scale(0.94,0.94)}</code>.
+                    <code>.droit button[type=submit]:hover {transform: translate (0,-3px)}</code>
+                    et en cliquant (active), il rétrécit en échelle 0.94 ; si l’échelle de 1.0, il ne transforme pas :
+                    <code>.droit button[type=submit]:hover {transform:scale(0.94,0.94)}</code>
                 </p>
                 <h5>Version desktop :</h5>
                 <p>
                     Maintenant, les parties gauche et droite s’affichent en deux colonnes du grid. La largeur de chaque partie est respectivement en proportion 45% sur 55% : 
-                    <code>.product-detail {display: grid; grid-template-columns: 45% 55%;}</code>. L’affichage des contenus sont inhérent au CSS mobile, cependant je mets la forme de commande 
-                    pour s’afficher en boîte avec des ombres dans cette version : <code>.product-detail .droit form{box-shadow: 5px 5px 4px 4px grey; border-radius: 10px; display: inline-block}</code>.
+                    <code>.product-detail {display: grid; grid-template-columns: 45% 55%;}</code> L’affichage des contenus sont inhérent au CSS mobile, cependant je mets la forme de commande 
+                    pour s’afficher en boîte avec des ombres dans cette version : <code>.product-detail .droit form{box-shadow: 5px 5px 4px 4px grey; border-radius: 10px; display: inline-block}</code>
                 </p>
             </section>
             <section>
@@ -160,8 +160,8 @@
                 <p>
                     Les parties gauches et droites s’affichent en grid comme la page de détail du produit mais en trois lignes en raison de trois résultats (produits) présents. Par ailleurs, 
                     la forme de commande est présente de la même manière que la page de détail du produit. De plus, j’ajoute trois bordures de chaque partie droite en pointillés avec deux coins arrondis
-                    en haut et en bas à droite  : <code>.search-results .droit {border-width: 2px 2px 2px 0; border-style: dashed; border-radius: 0 20px 20px 0}</code>. En bas, une boîte qui montre une 
-                    quantité de résultats affichés se place en centre de deux colonnes du grid : <code>.affiche-count{grid-column: 1/3 ; justify-self: center}</code>. 
+                    en haut et en bas à droite  : <code>.search-results .droit {border-width: 2px 2px 2px 0; border-style: dashed; border-radius: 0 20px 20px 0}</code> En bas, une boîte qui montre une 
+                    quantité de résultats affichés se place en centre de deux colonnes du grid : <code>.affiche-count{grid-column: 1/3 ; justify-self: center}</code> 
                 </p>   
             </section>
             <section>
@@ -177,14 +177,14 @@
                 <h5>Panier vide version desktop :</h5>
                 <p>
                     La mise en page est inhérente à celle de la page de la version mobile. Mais, l’affichage de deux parties en boîtes comme les pages précédentes dans la version desktop. 
-                    De plus, j’aligne les deux parties grâce au grid. Elles sont reparties en deux colonnes en différentes proportions :  <code>.panier{ grid-template-columns: 70% 30%}</code>.
+                    De plus, j’aligne les deux parties grâce au grid. Elles sont reparties en deux colonnes en différentes proportions :  <code>.panier{ grid-template-columns: 70% 30%}</code>
                 </p>
                 <h5>Panier plein version mobile :</h5>
                 <p>
                     Pour la partie gauche, j’ajoute une image de produit, son titre, sa description, son prix unitaire et deux boutons en différentes couleurs : Modifier et
                     Supprimer. Dans cette partie, j’aligne et justifie chaque item en center <code>{align-self : center ; justify-self : center}</code> sauf les éléments dans la div class « title »
                     (soit h3 et hr). Pour l’image du produit, une bordure est mis en couleur d’olive avec les coins arrondis, et la largeur et la hauteur sont 150 px:  <code>.panier .gauche
-                     .img{ width: 150px; height: 150px; border-radius: 10px; border: 2px solid olive}</code>.
+                     .img{ width: 150px; height: 150px; border-radius: 10px; border: 2px solid olive}</code>
                 </p>
                 <p>
                     Pour la partie droite, j’ajoute un résumé d’achat et un bouton de valider. En outre, les éléments h4 et le bouton de valider sont positionnés grâce à la position relative 
