@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Bangkok Thaï Street Food</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 992px)" />
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="50" height="32" alt="logo" />
+                    <h1 class="title">Bangkok Thaï Street Food</h1>
+                </a>
+                    <img id="logo-menu" src="image/iconfinder_menu_more_detail_list_interface_3994388.svg" width="32" height="32" alt="logo menu" />
+                    <ul class="nav-bar">
+                        <li><a href="about.html">QUI SOMMES-NOUS?</a></li>
+                        <li><a href="description_technique.html">DESCRIPTION TECHNIQUE</a></li>
+                        <li><a href="index.html">LA CARTE</a></li>
+                    </ul>
+                <div class="search">
+                    <form action="search_results.html" method="GET">
+                        <input type="text" placeholder="Rechercher.." name="search"><button type="submit"><img src="image/iconfinder_search-zoom-fit_2931190.png" width="25" height="25" alt="loupe" /></button>                    
+                    </form>
+                </div>
+                <a href="panier_vide.html" class="cart">
+                    <img src="image/iconfinder_basket_ecommerce_shop_4177565.svg" width="32" height="32" alt="panier" />
+                </a>
+            </div>
+        </header>
+        <main class="site-body">
+            <div class="product-detail">
+                <div class="gauche">
+                    <img src="image/pad-thai-4705276_640.jpg" alt="PAD THAI" />
+                </div>
+                <div class="droit">
+                    <h2>PAD THAI</h2>
+                    <p>Crevettes, boeuf, poulet ou tofu (au choix). Le tout sauté au wok avec cacahuètes, pousses de soja, citron vert, ciboulette thaï et nouilles de riz plates.</p>
+                    <h3>10,50 €</h3>
+                    <form action="panier_plein.html" method="POST">
+                        <label for="ingredient">Faites votre choix :</label><select name="ingredient" id="ingredient">
+                            <option>Crevettes</option>
+                            <option>Boeuf</option>
+                            <option>Poulet</option>
+                            <option>Tofu</option>
+                        </select><br>
+                        <label>Quantité : <input type="number" name="quantité" min="1" max="99" step="1"></label>
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="32" height="32" alt="logo" />
+                </a>
+                <div class="company">
+                    <strong class="title">BANGKOK THAI STREET FOOD</strong>
+                    <p>
+                        VILLEURBANNE, FRANCE
+                    </p>
+                    <p>
+                        Téléphone
+                        <strong><a href="tel:+33xxxxxxxxx">33xxxxxxxxx</a></strong> • Email
+                        <strong><a href="mailto:someone@example.com" target="_blank">someone@example.com</a></strong>
+                        <br />
+                        Lundi - Samedi 10h - 19h 
+                    </p>
+                </div>
+                <a href="description_technique.html"><small>Références</small></a>
+            </div>
+        </footer>
+      
+    </body>
+</html>

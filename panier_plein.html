@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Bangkok Thaï Street Food</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 992px)" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="50" height="32" alt="logo" />
+                    <h1 class="title">Bangkok Thaï Street Food</h1>
+                </a>
+                    <img id="logo-menu" src="image/iconfinder_menu_more_detail_list_interface_3994388.svg" width="32" height="32" alt="logo menu" />
+                    <ul class="nav-bar">
+                        <li><a href="about.html">QUI SOMMES-NOUS?</a></li>
+                        <li><a href="description_technique.html">DESCRIPTION TECHNIQUE</a></li>
+                        <li><a href="index.html">LA CARTE</a></li>
+                    </ul>
+                <div class="search">
+                    <form action="search_results.html" method="GET">
+                        <input type="text" placeholder="Rechercher.." name="search"><button type="submit"><img src="image/iconfinder_search-zoom-fit_2931190.png" width="25" height="25" alt="loupe" /></button>                    
+                    </form>
+                </div>
+                <a href="panier_vide.html" class="cart">
+                    <img src="image/iconfinder_basket_ecommerce_shop_4177565.svg" width="32" height="32" alt="panier" />
+                </a>
+            </div>
+        </header>
+        <main class="site-body">
+            <div class="panier">
+                <div class="gauche">
+                    <div class="title">
+                        <h3>DÉTAIL DE VOTRE PANIER</h3>
+                        <hr>    
+                    </div>
+                    <img src="image/pad-thai-4705276_640.jpg" alt="PAD THAI"> 
+                    <article>
+                        <h3>PAD THAI</h3>
+                        <p>Crevettes, nouilles de riz plates, pousses de soja, sauce soja, ciboulette ciselée, cacahuètes torréfiées et jus de citron vert.</p>
+                        <p>Quantité : <b>1</b></p>
+                        <p>Prix unitaire : <strong>10,50 €</strong></p>
+                    </article>  
+                    <form action="produit1.html">
+                        <button type="submit" name="modifier">Modifier</button>
+                    </form>
+                    <form action="panier_vide.html">
+                        <button type="submit" name="supprimer">Supprimer</button>
+                    </form>
+                </div>
+                <div class="droit">
+                    <h3>Votre panier</h3>
+                    <hr>
+                    <h4>Produits</h4>
+                    <p>PAD THAI CREVETTES X 1</p>
+                    <h4>*Prix : <strong>10,50 €</strong></h4>
+                    <small>*Sans frais de livraison (ajouter 3,00 € TTC pour faites-vous livrer)</small>
+                    <hr>
+                    <h2>Total  commande : <strong>10,50 €</strong></h2>
+                    <form>
+                        <button type="submit">Valider</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="32" height="32" alt="logo" />
+                </a>
+                <div class="company">
+                    <strong class="title">BANGKOK THAI STREET FOOD</strong>
+                    <p>
+                        VILLEURBANNE, FRANCE
+                    </p>
+                    <p>
+                        Téléphone
+                        <strong><a href="tel:+33xxxxxxxxx">33xxxxxxxxx</a></strong> • Email
+                        <strong><a href="mailto:someone@example.com" target="_blank">someone@example.com</a></strong>
+                        <br />
+                        Lundi - Samedi 10h - 19h 
+                    </p>
+                </div>
+                <a href="description_technique.html"><small>Références</small></a>
+            </div>
+        </footer>
+      
+    </body>
+</html>

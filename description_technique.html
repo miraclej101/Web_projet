@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Bangkok Thaï Street Food</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 992px)" />
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="50" height="32" alt="logo" />
+                    <h1 class="title">Bangkok Thaï Street Food</h1>
+                </a>
+                    <img id="logo-menu" src="image/iconfinder_menu_more_detail_list_interface_3994388.svg" width="32" height="32" alt="logo menu" />
+                    <ul class="nav-bar">
+                        <li><a href="about.html">QUI SOMMES-NOUS?</a></li>
+                        <li><a href="description_technique.html">DESCRIPTION TECHNIQUE</a></li>
+                        <li><a href="index.html">LA CARTE</a></li>
+                    </ul>
+                <div class="search">
+                    <form action="search_results.html" method="GET">
+                        <input type="text" placeholder="Rechercher.." name="search"><button type="submit"><img src="image/iconfinder_search-zoom-fit_2931190.png" width="25" height="25" alt="loupe" /></button>                    
+                    </form>
+                </div>
+                <a href="panier_vide.html" class="cart">
+                    <img src="image/iconfinder_basket_ecommerce_shop_4177565.svg" width="32" height="32" alt="panier" />
+                </a>
+            </div>
+        </header>
+         <main class="site-body">
+            <h2>DESCRIPTION TECHNIQUE</h2>
+            <section>
+                <h3>Les éléments</h3>
+                <p>
+                    Pour concevoir le site « Bangkok Thaï Street Food », avant tout je prépare les éléments comme les photos des plats, le logo du restaurant, les icônes
+                    (panier, recherche, contact etc.) qui sont téléchargeables gratuitement sur les sites dans les références. D’ailleurs, les photos de plats et le logo sont 
+                    respectivement en .jpg et .png, mais les icônes sont en .svg, un format vectoriel que je peux augmenter ou abaisser une taille sans dégrader leurs résolutions.
+                    En outre, j’utilise le site <a href="https://w3generator.com/color_gradient">« W3 Generator »</a> pour générer les CSS codes de background couleurs linéaires gradients. 
+                </p>
+            </section>
+            <section>
+                <h3>Mis en page</h3>
+                <p>
+                    La structure d’HTML présent dans l’arbre (DOM) se compose du head et du body qui contient le header, le main et le footer. Pour chaque page, ses contenus à savoir 
+                    le head,le header et le footer sont les mêmes ; il suffit de changer l’intérieure du bloc main correspondant à la fonction de la page. 
+                </p>
+                <h4>Le head</h4> Il contient :
+                <ul>
+                    <li>Le titre de site qui aussi apparait dans un onglet du navigateur.</li>
+                    <li>La balise <code>&lt;meta charset="utf-8" /&gt;</code> indique que les charactères Unicode sont utilisés dans le web.</li>
+                    <li>
+                        La balise <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</code> montre que la fenêtre d’affichage varie en fonction de l'appareil
+                        : plus petit sur un téléphone mobile que sur un écran d’ordinateur.
+                    </li>
+                    <li>Et les liens aux CSS feuilles de style que je divise en deux fichiers à savoir mobile.css et desktop.css en vu d’afficher les pages en fonction de 
+                        taille de l’écran. D’ailleurs, le CSS desktop sera téléchargé selon la media querie, <code>media="screen and (min-width: 992px)"</code> ; c’est-à-dire que à partir 
+                        de la taille de l’écran de 992px, le CSS desktop sera ajouté pour l’affichage d’une page.
+                    </li>    
+                </ul>
+                <p>
+                    Dans le body, j’emploie plutôt class qu’id car je peux réutiliser un même nom de class par exemple class « gauche » ou class « droit » si une partie possède
+                    la même mise en page qu’avant etc. Par ailleurs, j’utilise une seule id pour l’icône menu (#logo-menu) puisqu’il est un élément unique dans mon site donc je 
+                    suis certaine que je ne répéterai pas cette id. 
+                </p>
+                <h4>Le header et le footer</h4>Ses affichages sont différents selon la taille de l’écran, détaillés comme suivant :
+                <h5>Header version mobile : </h5>
+                <p>
+                    D’abord, j’affecte le code<code>.site-header{position: absolute; width: 100%; margin: 0;}</code> au header pour le mettre dans sa position et sa largeur. De plus, le menu barre se met à gauche et 
+                   il n’autorise pas les éléments flottants à flotter sur son côté gauche <code>#logo-menu{clear: left ;}</code>. Il devrait aussi cacher la barre du navigateur (nav-barre) dans le 
+                   menu car l’espace de l’écran ne sert pas bien l’affichage total de la nav-barre. Donc j’emploie <code>.nav-bar{display: none;}</code> pour cacher la nav-barre, ensuite je la fais 
+                   apparaître en survolant le menu et aussi la nav-barre qui reste sur sa position au survol : <code>#logo-menu:hover+ .nav-bar, .nav-bar:hover {display:block; background: #fff;}</code>.
+                   D’ailleurs, la nav-bar se présente en colonne <code>.nav-bar{flex-direction: column ;}</code>. Par ailleurs, le logo du restaurant et le titre de celui-ci sont alignés par 
+                   <code>.site-header .logo,.site-header .title{display: flex;}</code> En outre ,la barre de recherche (la search barre) et son bouton sont ajoutés en haut à droite de la page <code>.search{float: right;}</code>. 
+                   Ensuite, le panier (.cart) est mis en haut à gauche de la page par la position absolute pour préciser sa position. Tous les liens de la page respective sont associés grâce à la balise &lt;a href&gt;. Je  
+                   mets aussi des effets du changement de couleur quand on survole un lien ( :hover) et qu'on clique sur un lien ( :active).  
+                </p>
+                <h5>Header version desktop :</h5>
+                <p>
+                    J’utilise « grid » pour aligner ses contenus en quatre colonnes aux proportions correspondants à la taille de contenu (en fr). De plus je limite la largeur maximum à 1450 px.
+                     Ensuite, je cache la menu barre en <code>.nav-bar{display : none ;}</code>. Il est important d’affecter le panier en <code>.site-header .cart {position: relative ; top :auto ; right :auto}</code> 
+                     car il est précédemment en position absolute dans la version mobile donc il n’est pas aligné avec les autres contenus malgré l’emploi du grid. En revanche, le logo du restaurant,
+                      son titre, la nav barre et la recherche barre et son bouton sont placé bien dans le grid.
+                </p>
+                <h5>Footer version mobile : </h5>
+                <p>
+                    Le footer est placé en block dans l’ordre de l’arbre DOM et le texte est aligné en centre de la fenêtre. Il contient le logo du restaurant qui est lié à la page d’accueil, l’adresse, 
+                    une adresse email, un numéro de téléphone et les horaires de contact. Les balises <code>&lt;a href ="mailto:"&gt;</code> et <code>&lt;a href="tel:"&gt;</code> 
+                    font les liens avec l’adresse email et le numéro de téléphone respectivement. En bas centre du footer, un lien aux références est placé.
+                </p>
+                <h5>Footer version desktop :</h5>
+                <p>
+                    Ses contenus s’affichent en flex pour l’alignement. En conséquence le logo du restaurant se place à gauche, à côté d’un block du titre et du contact du restaurant. Malheureusement, 
+                    le lien des références est mal placé à droite au centre du footer, donc je le mets en <code>.site-footer a small{position : absolute ; right:200px; bottom: 30px;}</code> afin de le placer en bas
+                     droite du footer.
+                </p>
+            </section>
+            <section>
+                <h3>Page d’accueil (index.html)</h3>
+                <p>
+                    Cette page présente un message de promotion (ayant un lien à la page du résultat de recherche : 1 Acheté 1 Offert), certains plats avec leur image, leur nom, leur prix, un bouton panier
+                      pour ajouter un produit rapidement au panier, et un lien de détail du plat. La mise en place des version différentes comme suivante :
+                </p>
+                <h5>Version mobile :</h5>
+                <p>
+                    Les contenus des plats sont mis dans deux colonnes du grid de la même taille <code>.product-items {grid-template-columns: 1fr 1fr;}</code>. J’affecte <code>.product-item img {width : 100 % ;}</code> à sa largeur 
+                    et <code>img{ height: auto;}</code> à la hauteur à chaque image (l’ensemble des éléments img). Le message de la promotion s’affiche en block décoré en boîte : la larguer d’une bordure de 2px et 
+                    le style de la bordure en pontillés (dashed) et la couleur de la bordure en gris avec des coins  arrondies : <code>main aside {border: 2px dashed grey; border-radius: 10px;}</code>. La version mobile, 
+                    je voudrais afficher des items en 2D en raison de la limite de l’espace de l'écran d’un téléphone mobile.
+                </p>
+                <p>
+                    En bas du main, j’ajoute un div class sec-contact qui contient le titre « Contactez-nous », le numéro de téléphone et l’adresse email accompagnés respectivement avec leur icône. Les items 
+                    dans cette partie sont affiché en flex en colonne : <code>.contact-items { display: flex ; flex-direction: column; justify-content: center;}</code>.
+                </p>
+                <h5>Version desktop :</h5>
+                <p>
+                    Les contenus des plats sont affichés aussi en grid mais répartis équitablement en quatre colonnes : <code>.product-items {grid-template-columns: repeat(4,1fr);}</code>. Non seulement, l’affichage du message 
+                    de la promotion est inhérent au CSS mobile précédent mais en plus se place à droite  et est décoré en boîte avec des ombres: <code>main aside {float: right; display: block; border-radius: 10px ; box-shadow: 
+                    5px 5px 4px 4px grey; border: none;}</code>. Comme l’écran d’ordinateur est tellement plus grand que je peux afficher des items en 3D dans la version desktop. Le titre « Contactez-nous » reste au milieu 
+                    de la fenêtre et en block. Néanmoins, les contact items s’affiche en flex en ligne: <code>.contact-items {flex-direction: row;}</code> en même temps, les textes, « Téléphone » et « Email » s’affichent en block:  
+                    <code>p {display: block;}</code>
+                </p>
+            </section>
+            <section>
+                <h3>Page de détail du produit (produit1.html)</h3>
+                <p>
+                    La page montre le titre du produit, une image du produit, une description du produit, le prix du produit et enfin un select donnant la possibilité d’effectuer un achat en choisissant un ingrédient
+                    et une quantité en cliquant sur un bouton « ajouter au panier ».
+                </p>
+                <h5>Version mobile :</h5>
+                <p>
+                    L’ensemble du main s’affiche en block, d’ailleurs il est repartie en deux : class « gauche » et class « droit». La class gauche présente l’image du produit avec la largeur 100%. En même temps, la class droit
+                    montre le titre du produit, la description, le prix et la forme de commande. Tous sont affichés en block. Seulement, la forme s’affiche en boîte avec une bordure en
+                    pointillé et des frontières arrondies. J’ajoute des effets du changement au bouton « ajouter au panier ». En le survolant, il bouge en haut :<br>
+                    <code>.droit button[type=submit]:hover {transform: translate (0,-3px)}</code><br>
+                    et en cliquant (active), il rétrécit en échelle 0.94 ; si l’échelle de 1.0, il ne transforme pas :<br>
+                    <code>.droit button[type=submit]:hover{transform:scale(0.94,0.94)}</code>.
+                </p>
+                <h5>Version desktop :</h5>
+                <p>
+                    Maintenant, les parties gauche et droite s’affichent en deux colonnes du grid. La largeur de chaque partie est respectivement en proportion 45% sur 55% : 
+                    <code>.product-detail {display: grid; grid-template-columns: 45% 55%;}</code>. L’affichage des contenus sont inhérent au CSS mobile, cependant je mets la forme de commande 
+                    pour s’afficher en boîte avec des ombres dans cette version : <code>.product-detail .droit form{box-shadow: 5px 5px 4px 4px grey; border-radius: 10px; display: inline-block}</code>.
+                </p>
+            </section>
+            <section>
+                <h3>Page de résultats de recherche (search_results.html)</h3>
+                <p>
+                    Cette page révèle les résultats d’une recherche, mais elle est une page de simulation donc les résultats de 1 Acheté 1 Offert sont présents chaque fois que l’on clique sur
+                    le bouton de recherche (l’icône d’une loupe) et aussi quand on clique sur le lien de la promotion « 1 Acheté 1 Offert » </p>
+                <h5>Version mobile :</h5>
+                <p>
+                    La page est divisée en deux parties : class gauche et class droit. D’ailleurs, elle est affichée en lnline-block, en outre les formes de commande sont
+                    affichées avec une bordure en pointillé et des frontières arrondies.
+                </p>
+                <h5>Version desktop :</h5>
+                <p>
+                    Les parties gauches et droites s’affichent en grid comme la page de détail du produit mais en trois lignes en raison de trois résultats (produits) présents. Par ailleurs, 
+                    la forme de commande est présente de la même manière que la page de détail du produit. De plus, j’ajoute trois bordures de chaque partie droite en pointillés avec deux coins arrondis
+                    en haut et en bas à droite  :  <code>.search-results .droit {border-width: 2px 2px 2px 0; border-style: dashed; border-radius: 0 20px 20px 0}</code>. En bas, une boîte qui montre une 
+                    quantité de résultats affichés se place en centre de deux colonnes du grid : <code>.affiche-count{grid-column: 1/3 ; justify-self: center}</code>. 
+                </p>   
+            </section>
+            <section>
+                <h3>Page d’un panier vide et plein</h3>
+                <p>La page présente un panier de simulation d’achat lorsque respectivement, il est vide et qu’il est rempli d’un produit.</p>
+                <h5>Panier vide version mobile :</h5>
+                <p>
+                    La page se divise en deux parties et s’affichent de la même façon que les pages précédentes. D’ailleurs, l’intérieur de la partie gauche se met en 
+                    deux colonnes du grid correspondant à la taille de chaque partie :  <code>.panier .gauche {grid-template-columns: 35% 65%}</code>. En conséquence, je dois mettre 
+                    le titre de la partie gauche et l’élément hr (ligne horizontale) en deux colonnes <code>.panier .gauche { grid-column: 1/3}</code>. En outre, la largeur de la partie
+                    gauche est 85%. Celle de la partie droite est limité au maximum 400 px.
+                </p>
+                <h5>Panier vide version desktop :</h5>
+                <p>
+                    La mise en page est inhérente à celle de la page de la version mobile. Mais, l’affichage de deux parties en boîtes comme les pages précédentes dans la version desktop. 
+                    De plus, j’aligne les deux parties grâce au grid. Elles sont reparties en deux colonnes en différentes proportions :  <code>.panier{ grid-template-columns: 70% 30%}</code>.
+                </p>
+                <h5>Panier plein version mobile :</h5>
+                <p>
+                    Pour la partie gauche, j’ajoute une image de produit, son titre, sa description, son prix unitaire et deux boutons en différentes couleurs : Modifier et
+                    Supprimer. Dans cette partie, j’aligne et justifie chaque item en center <code>{align-self : center ; justify-self : center}</code> sauf les éléments dans la div class « title »
+                    (soit h3 et hr). Pour l’image du produit, une bordure est mis en couleur d’olive avec les coins arrondis, et la largeur et la hauteur sont 150 px:  <code>.panier .gauche
+                     .img{ width: 150px; height: 150px; border-radius: 10px; border: 2px solid olive}</code>.
+                </p>
+                <p>
+                    Pour la partie droite, j’ajoute un résumé d’achat et un bouton de valider. En outre, les éléments h4 et le bouton de valider sont positionnés grâce à la position relative 
+                    afin de les décaler à droite. 
+                </p>
+                <h5>Panier plein version desktop :</h5>
+                <p>La mise en page est inhérente au schéma de la page de panier vide avec tous les éléments au-dessus. Les deux parties sont alignées par le grid columns.</p>
+            </section>
+            <section>
+                <h3>Références</h3>
+                <ul>
+                    <li>Les photos par <a href="https://pixabay.com/">Pixabay</a></li>
+                    <li>Des icônes par <a href="https://www.iconfinder.com/">Iconfinder</a></li>    
+                    <li><a target="_blank" href="https://icons8.com/icons/set/tableware">Icône Tableware</a> par <a target="_blank" href="https://icons8.com">Icons8</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="s-container">
+                <a href="index.html" class="logo">
+                    <img src="image/icons8-tableware-100.png" width="32" height="32" alt="logo" />
+                </a>
+                <div class="company">
+                    <strong class="title">BANGKOK THAI STREET FOOD</strong>
+                    <p>
+                        VILLEURBANNE, FRANCE
+                    </p>
+                    <p>
+                        Téléphone
+                        <strong><a href="tel:+33xxxxxxxxx">33xxxxxxxxx</a></strong> • Email
+                        <strong><a href="mailto:someone@example.com" target="_blank">someone@example.com</a></strong>
+                        <br />
+                        Lundi - Samedi 10h - 19h 
+                    </p>
+                </div>
+                <a href="description_technique.html"><small>Références</small></a>
+            </div>
+        </footer>
+      
+    </body>
+</html>

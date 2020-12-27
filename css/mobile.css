@@ -1,0 +1,468 @@
+img, svg {
+    vertical-align : middle;
+    }
+    img {
+    border-style : none;
+    }
+    svg {
+    overflow : hidden;
+    }
+    body, img {
+    height : auto;
+    }
+    article, aside, footer, header, main, nav {
+    display : block;
+    }
+    pre, ul {
+    margin-top : 0;
+    }
+    small {
+    font-size : 80%;
+    }
+    button {
+    border-radius : 2px;
+    }
+    button, input {
+    margin : 0;
+    font-family : inherit;
+    font-size : inherit;
+    line-height : inherit;
+    }
+    html {
+    font-family : Arial, Helvetica, sans-serif;
+    line-height : 1.15;
+    }
+    body {
+    margin : 0;
+    font-size : 1rem;
+    line-height : 1.5;
+    color : #424446;
+    background-color : #fff;
+    text-rendering : optimizeLegibility;
+    }
+    h1, h2, h3, h4, h5, h6 {
+    padding : 0;
+    margin : 0 0 0.5rem;
+    line-height : 1.4;
+    }
+    h1 {
+    font-size : 1.75em;
+    }
+    h2 {
+    font-size : 1.5em;
+    }
+    h3 {
+    font-size : 1.375em;
+    }
+    h4 {
+    font-size : 1.125em;
+    }
+    h5 {
+    font-size : 1em;
+    }
+    h6 {
+    font-size : 0.875em;
+    }
+    p {
+    padding : 0;
+    margin : 0 0 1em;
+    }
+    ul {
+    margin-bottom : 1em;
+    text-indent : 0;
+    margin : 0 0 1.5em;
+    padding-left : 1.5em;
+    }
+    a {
+    color : #18775d;
+    text-decoration : none;
+    background-color : transparent;
+    transition : 0.3s;
+    }
+    a:hover {
+    color : burlywood;
+    }
+    a:active {
+    color : #714300;
+    }
+    hr {
+    box-sizing : content-box;
+    height : 1px;
+    border : 0;
+    border-top : 1px solid #ddd;
+    margin : 1.5em 0;
+    }
+    p {
+    font-size : 14px;
+    }
+    body, html {
+    width : 100%;
+    overflow-x : hidden;
+    }
+    .btn-main {
+    border-radius : 40px;
+    min-width : 80px;
+    display : inline-block;
+    padding : 10px 20px;
+    color : #fff;
+    font-weight : 500;
+    }
+    .btn-main {
+    background : #208e70;
+    background : linear-gradient(145deg, #239c7c 0, #18775d 100%);
+    }
+    .btn-main:hover {
+    color : #fff;
+    transform : translate(0,-3px);
+    background-position : 0 -22px;
+    }
+    .btn-main:active {
+    transform : scale(0.94,0.94);
+    box-shadow : none;
+    }
+    .s-container {
+    padding : 0 16px;
+    }
+    .site-header {
+    background-color : #075d45;
+    padding : 10px 0;
+    position : absolute;
+    width : 100%;
+    margin : 0;
+    }
+    .site-header .logo, .site-header .title {
+    display : flex;
+    }
+    .site-header .title {
+    font-size : 1.125rem;
+    margin : 0 0 0 8px;
+    color : white;
+    align-self : center;
+    }
+    .site-header .cart {
+    position : absolute;
+    top : 12px;
+    right : 70px;
+    }
+    .search {
+    float : right;
+    }
+    .search input[type="text"] {
+    padding : 6px;
+    font-size : 16px;
+    border : none;
+    }
+    .search button[type="submit"] {
+    background : #ddd;
+    padding : 6px;
+    width : 36px;
+    height : 36px;
+    border : none;
+    cursor : pointer;
+    }
+    .search button[type="submit"]:hover {
+    background : #cccccc;
+    }
+    .nav-bar, .site-footer a, b, strong {
+    font-weight : 500;
+    }
+    .nav-bar {
+    flex-direction : column;
+    text-align : center;
+    margin-top : -3em;
+    list-style : none;
+    display : none;
+    }
+    #logo-menu {
+    clear : left;
+    display : block;
+    padding-top : 1em;
+    padding-left : 0.5em;
+    padding-right : 20em;
+    }
+    #logo-menu:hover + .nav-bar, .nav-bar:hover {
+    display : block;
+    background : #fff;
+    }
+    header {
+    position : relative;
+    display : block;
+    }
+    main {
+    position : relative;
+    margin-top : 220px;
+    display : block;
+    }
+    main aside {
+    color : orangered;
+    border : grey dashed 2px;
+    border-radius : 10px;
+    width : max-content;
+    padding : 10px;
+    margin : 10px;
+    }
+    .sec-title {
+    font-size : 28px;
+    }
+    .sec-contact, .sec-products {
+    padding : 30px 0;
+    text-align : center;
+    }
+    .product-item img {
+    width : 100%;
+    }
+    .product-items {
+    display : grid;
+    gap : 16px;
+    grid-template-columns : 1fr 1fr;
+    padding : 20px 0;
+    }
+    .product-items button[type="submit"] {
+    width : 36px;
+    height : 36px;
+    border-radius : 50%;
+    border-style : dashed;
+    }
+    .product-items button[type="submit"]:hover {
+    background-color : #cccccc;
+    }
+    .product-item p, .product-item p + form {
+    display : inline-block;
+    margin : 5px;
+    }
+    .product-item a {
+    display : block;
+    }
+    .product-item {
+    text-align : center;
+    }
+    .product-item .title {
+    font-size : 1rem;
+    margin : 8px 0 4px;
+    }
+    .product-item .price {
+    color : #18775d;
+    font-size : 16px;
+    }
+    .product-item .price b {
+    font-size : 1.625rem;
+    }
+    .sec-contact {
+    background-color : #18775d;
+    color : #fff;
+    margin : 0 calc(50% - 50vw);
+    position : relative;
+    overflow : hidden;
+    }
+    .sec-contact a {
+    color : #fff;
+    }
+    .contact-items {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    }
+    .contact-item {
+    display : flex;
+    align-items : center;
+    margin : 10px auto;
+    text-align : left;
+    width : 158px;
+    white-space : nowrap;
+    }
+    .contact-item img {
+    margin : 0 8px 2px 0;
+    }
+    .contact-item p {
+    font-size : 13px;
+    margin : 0;
+    line-height : 1;
+    }
+    .site-footer {
+    background : #075d45;
+    color : #fff;
+    padding : 20px 0;
+    text-align : center;
+    }
+    .site-footer p {
+    white-space : nowrap;
+    }
+    .site-footer .title {
+    margin : 10px 0;
+    display : block;
+    }
+    .site-footer a {
+    color : #fff;
+    }
+    .site-footer a {
+    display : inline-block;
+    margin : 10px 6px;
+    }
+    .site-footer {
+    font-size : 15px;
+    text-transform : uppercase;
+    }
+    .gauche {
+    width : 100%;
+    }
+    .gauche img {
+    max-width : 100%;
+    }
+    .product-detail .droit, .search-results .droit {
+    width : 95%;
+    margin : 15px 10px;
+    }
+    .product-detail .droit p {
+    text-align : justify;
+    }
+    .product-detail .droit h3 {
+    color : #18775d;
+    }
+    .droit button[type="submit"] {
+    margin : 10px;
+    border-radius : 40px;
+    color : #fff;
+    background : #208e70;
+    background : linear-gradient(145deg, #239c7c 0, #18775d 100%);
+    border : none;
+    box-sizing : border-box;
+    width : 142px;
+    height : 38px;
+    }
+    .droit button[type="submit"]:hover, .panier .gauche button:hover {
+    transform : translate(0,-3px);
+    background-position : 0 -22px;
+    }
+    .droit button[type="submit"]:active, .panier .gauche button:active {
+    transform : scale(0.94,0.94);
+    }
+    .product-detail .droit form, .search-results .droit form {
+    border-style : dotted;
+    border-color : gray;
+    padding : 15px 5px;
+    border-radius : 10px;
+    margin-bottom : 40px;
+    }
+    form label::after {
+    content : " ";
+    }
+    main h2 {
+    text-indent : 0.5em;
+    }
+    .search-results {
+    display : inline-block;
+    }
+    .item1 {
+    text-align : center;
+    }
+    .search-results > p, .search-results > form {
+    margin : 0 0 15px 10px;
+    display : inline-block;
+    }
+    main h5 {
+    color : #18775d;
+    }
+    main h6 {
+    color : orangered;
+    }
+    .affiche-count {
+    max-width : 60vw;
+    margin : 10px 10px 30px 10px;
+    padding : 5px;
+    border-radius : 10px;
+    border : grey double 4px;
+    text-align : center;
+    }
+    .affiche-count h6 {
+    color : #18775d;
+    }
+    .panier .gauche {
+    width : 85%;
+    }
+    .panier > div {
+    display : inline-block;
+    border : grey dashed 2px;
+    border-radius : 10px;
+    margin : 10px 20px 40px 20px;
+    padding : 10px;
+    }
+    .panier .gauche img {
+    width : 150px;
+    height : 150px;
+    border-radius : 10px;
+    border : olive solid 2px;
+    align-self : center;
+    justify-self : center;
+    }
+    .panier form {
+    border : none;
+    align-self : center;
+    justify-self : center;
+    }
+    .panier .gauche button[name="modifier"] {
+    background : #f2762e;
+    background : linear-gradient(145deg, #f2762e 0%, #e0480b 100%);
+    border-radius : 40px;
+    color : #fff;
+    border : none;
+    box-sizing : border-box;
+    width : 142px;
+    height : 38px;
+    }
+    .panier .gauche button[name="supprimer"] {
+    background : #f22222;
+    background : linear-gradient(145deg, #f22222 0%, #96090e 100%);
+    margin : 10px;
+    border-radius : 40px;
+    color : #fff;
+    border : none;
+    box-sizing : border-box;
+    width : 142px;
+    height : 38px;
+    }
+    .panier .gauche {
+    display : grid;
+    grid-template-columns : 35% 65%;
+    gap : 8px;
+    }
+    .panier .gauche .title {
+    grid-column : 1 / 3;
+    }
+    .panier article p:first-of-type {
+    text-align : justify;
+    }
+    .panier article {
+    margin : 10px;
+    align-self : center;
+    justify-self : center;
+    }
+    .droit h4:nth-of-type(2) {
+    position : relative;
+    left : 13em;
+    }
+    .panier .droit small {
+    display : block;
+    }
+    h2 > strong, h4 > strong {
+    color : #18775d;
+    }
+    .panier .droit button {
+    position : relative;
+    left : 110px;
+    }
+    .panier .droit {
+    max-width : 400px;
+    }
+    main section {
+    margin : 0 10px 30px 10px;
+    padding : 15px;
+    border-radius : 10px;
+    border: 3px ridge green;
+    text-align: justify;
+    }
+    main section h2 {
+    text-indent : initial;
+    }
+    h3:first-child{text-align:left;}
+    code{ color: black;}
+    
