@@ -153,14 +153,14 @@
                     le bouton de recherche (l’icône d’une loupe) et aussi quand on clique sur le lien de la promotion « 1 Acheté 1 Offert » </p>
                 <h5>Version mobile :</h5>
                 <p>
-                    La page est divisée en deux parties : class gauche et class droit. D’ailleurs, elle est affichée en lnline-block, en outre les formes de commande sont
+                    La page est divisée en deux parties : class « gauche » et class « droit». D’ailleurs, elle est affichée en lnline-block, en outre les formes de commande sont
                     affichées avec une bordure en pointillé et des frontières arrondies.
                 </p>
                 <h5>Version desktop :</h5>
                 <p>
                     Les parties gauches et droites s’affichent en grid comme la page de détail du produit mais en trois lignes en raison de trois résultats (produits) présents. Par ailleurs, 
                     la forme de commande est présente de la même manière que la page de détail du produit. De plus, j’ajoute trois bordures de chaque partie droite en pointillés avec deux coins arrondis
-                    en haut et en bas à droite  :  <code>.search-results .droit {border-width: 2px 2px 2px 0; border-style: dashed; border-radius: 0 20px 20px 0}</code>. En bas, une boîte qui montre une 
+                    en haut et en bas à droite  : <code>.search-results .droit {border-width: 2px 2px 2px 0; border-style: dashed; border-radius: 0 20px 20px 0}</code>. En bas, une boîte qui montre une 
                     quantité de résultats affichés se place en centre de deux colonnes du grid : <code>.affiche-count{grid-column: 1/3 ; justify-self: center}</code>. 
                 </p>   
             </section>
@@ -171,7 +171,7 @@
                 <p>
                     La page se divise en deux parties et s’affichent de la même façon que les pages précédentes. D’ailleurs, l’intérieur de la partie gauche se met en 
                     deux colonnes du grid correspondant à la taille de chaque partie :  <code>.panier .gauche {grid-template-columns: 35% 65%}</code>. En conséquence, je dois mettre 
-                    le titre de la partie gauche et l’élément hr (ligne horizontale) en deux colonnes <code>.panier .gauche { grid-column: 1/3}</code>. En outre, la largeur de la partie
+                    le titre de la partie gauche et l’élément hr (ligne horizontale) en deux colonnes <code>.panier .gauche .title{ grid-column: 1/3}</code>. En outre, la largeur de la partie
                     gauche est 85%. Celle de la partie droite est limité au maximum 400 px.
                 </p>
                 <h5>Panier vide version desktop :</h5>
