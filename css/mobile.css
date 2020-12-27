@@ -461,12 +461,14 @@ img, svg {
     padding : 15px;
     border-radius : 10px;
     border: 3px ridge green;
-    text-align:left;
+    text-align:justify;
     }
+    section h3:first-child{text-align: left;}
     main section h2 {
     text-indent : initial;
     }
     code{ 
+        text-align: initial;
         color: black;
         display:block}
     .logo img{max-height: 50px;}
